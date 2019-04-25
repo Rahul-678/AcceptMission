@@ -40,7 +40,7 @@ public abstract class BaseTest {
 	public static WebDriver driver;
 	
 	public Map<String, Object> jobDetails;
-	public String applyURL;
+	public String baseURL;
 
 	private String originalHandle;
 
@@ -83,7 +83,7 @@ public abstract class BaseTest {
 		driver.manage().window().maximize();
         
 		//driver.get(url);
-		applyURL = url;
+		baseURL = url;
 		originalHandle = driver.getWindowHandle();
 		
 		// load test_data.xml file
@@ -97,12 +97,12 @@ public abstract class BaseTest {
 
 	@AfterClass
 	public void afterMainClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@BeforeTest
 	public void beforeMainTest() {
-		// this.beforeTest();
+		//this.beforeTest();
 	}
 
 	@AfterTest
@@ -133,9 +133,9 @@ public abstract class BaseTest {
 			if (!handle.equals(originalHandle)) {
 				driver.switchTo().window(handle);
 				driver.close();
-			}
 		}
-		driver.switchTo().window(originalHandle);
+		}
+		//driver.switchTo().window(originalHandle);
 	}
 	
 

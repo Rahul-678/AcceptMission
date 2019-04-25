@@ -30,9 +30,9 @@ public class SmokeTest extends BaseTest{
 		 String title= driver.getTitle();
 		    System.out.println("This page title is   "+ title);
 		Assert.assertEquals(dashboardPage.getPageTitle(),"DASHBOARD");
-		//driver.close();
+		driver.close();
 	}
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void verify_Signup() throws InterruptedException {
 		driver.get("https://acceptmission.com");
 		
@@ -54,11 +54,10 @@ public class SmokeTest extends BaseTest{
 		driver.close();
 		
 	}
-   
 	@Override
 	public void afterTest() {
 		// TODO Auto-generated method stub
-		System.out.println("Testcase Passed");
+		
 	}
-
+	
 }
