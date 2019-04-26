@@ -13,12 +13,11 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
 import com.google.common.io.Files;
 
 
 public class TestListener implements ITestListener {
-	public static int scriptExeCount, passCount, failCount, skipCount=0;
+public static int scriptExeCount, passCount, failCount, skipCount=0;
 
 	
 	public void onTestStart(ITestResult result) {
@@ -41,7 +40,7 @@ public class TestListener implements ITestListener {
 		
 		TakesScreenshot ts = (TakesScreenshot) BaseTest.driver;
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
-		File destFile = new File("D:/SCREENSHOTS/"+result.getName()+".png");
+		File destFile = new File("./screenshot"+result.getName()+".png");
 		try
 		{
 			Files.copy(srcFile, destFile);
@@ -83,6 +82,7 @@ public class TestListener implements ITestListener {
 	}
 
 	
+
 	
 
 }  

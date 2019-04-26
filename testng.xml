@@ -5,11 +5,11 @@
       <listener class-name="testproject.qa.TestListener"/>
   </listeners>
   <test thread-count="5" name="Test">
-  <!-- dtiverType = Firefox, Chrome -->
-  <parameter name="driverType" value="Chrome"></parameter>
+  <!-- dtiverType = Firefox, "chrome" -->
+  <parameter name="browser" value="chrome"></parameter>
   
   <!-- Base URL -->
-  <parameter name="url" value="https://acceptmission.com"></parameter>
+  <parameter name="baseurl" value="https://acceptmission.com"></parameter>
   
     <classes>
       <class name="testproject.qa.SmokeTest"/>

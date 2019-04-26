@@ -30,7 +30,7 @@ public class SmokeTest extends BaseTest{
 		 String title= driver.getTitle();
 		    System.out.println("This page title is   "+ title);
 		Assert.assertEquals(dashboardPage.getPageTitle(),"DASHBOARD");
-		driver.close();
+		//driver.close();
 	}
 	//@Test(priority=1)
 	public void verify_Signup() throws InterruptedException {
@@ -44,20 +44,17 @@ public class SmokeTest extends BaseTest{
 		SignupPage.enterPhoneNumber();
 		SignupPage.enterComapnyName();
 		SignupPage.ClickOnSignUp_Btn();
-//		Thread.sleep(2000);
-//		SignupPage.closePopup();
-//		
-//		SignupPage.verify_SignUp_Page();
-//		 String title= driver.getTitle();
-//		    System.out.println(title);
-//		Assert.assertEquals(dashboardPage.getPageTitle(),"DASHBOARD");
-		driver.close();
+		Thread.sleep(2000);
+		SignupPage.closePopup();
+		
+		SignupPage.verify_SignUp_Page();
+		 String title= driver.getTitle();
+		    System.out.println(title);
+		Assert.assertEquals(dashboardPage.getPageTitle(),"DASHBOARD");
+		//driver.close();
 		
 	}
-	@Override
-	public void afterTest() {
-		// TODO Auto-generated method stub
 		
 	}
 	
-}
+

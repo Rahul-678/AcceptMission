@@ -43,10 +43,10 @@ public class Signup_Page extends BasePage{
 		PageFactory.initElements(driver, this);
 	}
 	
-//	public void clickOn_GetStartedNow_Btn() {
-//		Get_Started_Now.click();
-//		Reporter.log("<br>clickLoginBtn", true);
-//	}
+	public void clickOn_GetStartedNow_Btn() {
+		Get_Started_Now.click();
+		Reporter.log("<br>clickLoginBtn", true);
+	}
 	public void enterEmail() {
 		long millis = System.currentTimeMillis() % 1000;
 	       String  	strUserEmail="acm"+ millis+"@yopmail.com";
