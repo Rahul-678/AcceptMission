@@ -5,8 +5,8 @@
   <distributionManagement>
        <repository>
          <id>internal.repo</id>
-         <name>AcceptMission repo</name>
-         <url>C:/Users/Guest Login/eclipse-workspace/AcceptMission</url>
+         <name>AcceptMission</name>
+         <url>https://github.com/Rahul-678/AcceptMission</url>
        </repository>
    </distributionManagement>
 <groupId>testproject.qa</groupId>
