@@ -6,7 +6,7 @@
   <artifactId>testproject.qa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
+   
 <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
@@ -60,14 +60,10 @@
     <version>3.141.59</version>
 </dependency>
  </dependencies>
- <distributionManagement>
-        <repository>
-            <id>testproject.qa</id>
-            <url>https://github.com/Rahul-678/AcceptMission</url>
-        </repository>
-        <snapshotRepository>
-            <id>testproject.qa</id>
-            <url>https://github.com/Rahul-678/AcceptMission</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <distributionManagement>
+    <repository>
+        <id>sonatype-nexus</id>
+        <url>http://sonatype.myco.com/nexus/content/repositories/snapshots/</url>
+    </repository>
+</distributionManagement>
 </project>
